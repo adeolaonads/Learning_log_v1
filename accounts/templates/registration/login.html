@@ -1,0 +1,24 @@
+{% extends 'learning_logs/base.html' %}
+{% load django_bootstrap5 %}
+
+{% block page_header %}
+
+{% for message in messages %}
+<div class="message banner alert alert-primary text-center alert-width {{ message.tags }}">
+    {{ message }}
+</div>
+{% endfor %}
+
+<h2>Log in to your account.</h2>
+{% endblock page_header %}
+{% block content %}
+<form action="{% url 'accounts:login' %}" method='post'>
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% bootstrap_button button_type="submit" content="Log in" %}
+</form>
+
+{% endblock content %}
+
+
+ 

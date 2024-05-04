@@ -1,0 +1,48 @@
+{% extends 'learning_logs/base.html' %}
+{% load static %}
+{% include 'undraw_learning.svg' %}
+{% include 'undraw_online_articles.svg' %}
+{% load svg %}
+
+{% block page_header %}
+<div class="p-3 mb-4 bg-light border rounded-3 bg-black">
+    <div class="container-fluid py-4">
+        {% if user.is_authenticated %}
+        <h1 class="display-3">Welcome back {{ user.username }} , resume your learning.</h1>
+        <p class="lead">Make your own Learning Log, and keep a list of the topics you're learning about. Whenever you
+            learn something new about a topic, make an entry summarizing what you've learned.</p>
+        <span>You can check out your saved topics and entries <a class="noline"
+                href="{% url 'learning_logs:topics' %}">here</a></span>
+        {% else %}
+     
+        <h1 class="display-3">Track your learning.</h1>
+        <p class="lead">Make your own Learning Log, and keep a list of the topics you're learning about. Whenever you
+            learn something new about a topic, make an entry summarizing what you've learned.</p>
+        <div class="d-flex justify-content-between">
+            <a class="btn btn-primary btn-lg mt-1 text-white ahover" href="{% url 'accounts:register' %}">Sign Up
+                &raquo;</a>
+            <a class="btn btn-secondary btn-lg mt-1 text-white ahover" href="{% url 'accounts:login' %}">Login
+                &raquo;</a>
+        </div>
+
+       
+
+        {% endif %}
+    </div>
+
+</div>
+
+{% if user.is_authenticated %}
+
+    <svg width="500px" height="500px" id="svgfile">{% svg 'undraw_online_articles' %}</svg>
+
+{% else %}
+
+    <svg width="500px" height="500px" id="svgfile">{% svg 'undraw_learning' %}</svg>
+
+
+{% endif %}
+
+{{ redirect_to_login_immediately }}
+
+{% endblock page_header %}

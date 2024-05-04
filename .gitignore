@@ -1,0 +1,11 @@
+# Django #
+*.log
+*.pot
+*.pyc
+__pycache__/
+*.sqlite3
+media
+ll_env/
+
+# Backup files # 
+*.bak

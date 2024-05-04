@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#body{
+    background-color: #fff !important;
+    
+}
+
+
+.noline{
+    text-decoration: none;
+    color: #0D6EFD;
+    
+}
+
+.noline a:visited{
+    color: #0D6EFD;
+}
+
+
+.bg-black {
+    background-color: #000000 !important; 
+    color: #fff;
+}
+
+
+/* .noline .ahover:hover{
+    background-color: white !important;
+    color: #0D6EFD !important;    
+} */
+
+
+
+a.nounderline {
+    text-decoration: none;
+}
+
+ a.nounderline:hover{
+    border-bottom: solid 2px #1596e1;
+} 
+
+
+
+a.nounderline:visited{
+    color: #000;
+}
+
+a.entry-link{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+a.entry-link:visited{
+    color: #fff !important;
+    text-decoration: none;
+}
+
+
+.entry-link:hover{
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+
+
+.svg-container{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+
+#svgfile{
+    
+}
